@@ -32,20 +32,15 @@ public class SistemaFarmacia {
                 case 2:
                     farmacia.exibirEstoque();
                     break;
-
                 case 3:
-                    System.out.print("Nome do cliente: ");
-                    String nomeCliente = scanner.next();
-                    Cliente cliente = new Cliente(nomeCliente);
-
                     System.out.print("Nome do produto a comprar: ");
                     String nomeProdutoCompra = scanner.next();
                     Produto produtoComprado = farmacia.buscarProdutoPorNome(nomeProdutoCompra);
-
+                
                     if (produtoComprado != null) {
                         System.out.print("Quantidade a comprar: ");
                         int quantidadeCompra = scanner.nextInt();
-
+                
                         if (quantidadeCompra <= produtoComprado.getQuantidade()) {
                             produtoComprado.exibirInformacoesDetalhadas(quantidadeCompra);
                             produtoComprado.setQuantidade(produtoComprado.getQuantidade() - quantidadeCompra);
@@ -56,7 +51,7 @@ public class SistemaFarmacia {
                         System.out.println("Produto não encontrado.");
                     }
                     break;
-
+                
                 case 4:
                     System.out.println("Saindo do sistema. Até mais!");
                     System.exit(0);
