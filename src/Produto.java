@@ -37,7 +37,8 @@ public class Produto {
     }
 
     public void exibirInformacoes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exibirInformacoes'");
+        System.out.println("Produto: " + nome);
+        System.out.println("Preço: R$" + preco);
+        System.out.println("Quantidade em estoque: " + quantidade);
     }
 }
