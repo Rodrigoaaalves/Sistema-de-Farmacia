@@ -20,17 +20,19 @@ public class Produto {
     public int getQuantidade() {
         return quantidade;
     }
-
-    public void exibirInformacoes() {
-        System.out.println("Produto: " + nome);
-        System.out.println("Preço: R$" + preco);
-        System.out.println("Quantidade em estoque: " + quantidade);
-    }
   
     public void exibirInformacoesDetalhadas(int quantidadeComprada) {
         System.out.println("Produto: " + nome);
         System.out.println("Preço: R$" + preco);
         System.out.println("Quantidade em estoque: " + quantidade);
         System.out.println("Quantidade comprada:" + quantidadeComprada + " por este cliente(s)");
+    }
+    
+    public void setQuantidade(int novaQuantidade) {
+        if (novaQuantidade >= 0) {
+            this.quantidade = novaQuantidade;
+        } else {
+            System.out.println("Quantidade não pode ser negativa.");
+        }
     }
 }
