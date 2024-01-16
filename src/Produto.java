@@ -35,4 +35,9 @@ public class Produto {
             System.out.println("Quantidade não pode ser negativa.");
         }
     }
+
+    public void exibirInformacoes() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'exibirInformacoes'");
+    }
 }
